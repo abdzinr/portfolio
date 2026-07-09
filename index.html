@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akchat Bhargava | 2D & 3D Animator, Motion Graphic Designer & Ad Designer</title>
+    <meta name="description" content="Akchat Bhargava is a 2D/3D animator, motion graphic designer and ad designer specializing in character animation, VFX, brand identity, product visualization and high-impact advertisement design. Founder & CEO of AB DZINRS, Kanpur, India.">
+    <meta name="keywords" content="2D animator, 3D animator, motion graphic designer, motion designer, ad designer, animation studio, VFX artist, character animation, explainer video animator, brand identity designer, logo designer, packaging designer, product visualization artist, video editor, graphic designer Kanpur, Akchat Bhargava, AB DZINRS">
+    <meta name="author" content="Akchat Bhargava">
+    <link rel="canonical" href="https://akchatbhargava.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Akchat Bhargava | 2D & 3D Animator, Motion Graphic Designer & Ad Designer">
+    <meta property="og:description" content="2D/3D animator and motion graphic designer crafting character animation, VFX, brand identity, product visualization and ad design for global clients.">
+    <meta property="og:image" content="Asset/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akchat Bhargava | 2D & 3D Animator, Motion Graphic Designer & Ad Designer">
+    <meta name="twitter:description" content="2D/3D animator and motion graphic designer crafting character animation, VFX, brand identity, product visualization and ad design for global clients.">
+    <meta name="twitter:image" content="Asset/profile.webp">
+
+    <link class="portfolio-favicon" rel="icon" type="image/webp" href="Asset/ico.webp">
+    <link rel="apple-touch-icon" href="Asset/ico.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Akchat Bhargava",
+      "jobTitle": "2D/3D Animator, Motion Graphic Designer & Ad Designer",
+      "worksFor": { "@type": "Organization", "name": "AB DZINRS" },
+      "url": "https://akchatbhargava.com/",
+      "image": "Asset/profile.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kanpur",
+        "addressRegion": "Uttar Pradesh",
+        "addressCountry": "IN"
+      },
+      "knowsAbout": ["2D Animation", "3D Animation", "Motion Graphics", "Ad Design", "VFX", "Brand Identity", "Product Visualization", "Video Editing"]
+    }
+    </script>
+    <style>
+        /* Imported Encode Sans Expanded (All available weights: 100 to 900) */
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --primary: #148fee;
+            --accent: #c11b84;
+
+            /* ---- TRUSTED-BY LOGO MARQUEE CONTROLS ---- */
+            --logo-height-mobile: 3.25rem;   
+            --logo-height-desktop: 4.5rem;  
+            --logo-gap: 5rem;                
+            --marquee-speed: 30s;            
+            --marquee-speed-reverse: 30s;
+        }
+        
+        body {
+            font-family: 'Encode Sans Expanded', sans-serif;
+            background-color: #000000;
+        }
+
+        /* 3D Perspective Checkerboard Background Canvas Container */
+        .site-bg-layer {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            overflow: hidden;
+            background-color: #000000;
+            pointer-events: none;
+        }
+
+        .site-bg-layer canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0.65;
+        }
+
+        .site-bg-layer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.95) 100%),
+                linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.9) 100%);
+            pointer-events: none;
+        }
+
+        /* Global Scroll Reveal Animations */
+        .fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .scale-in {
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        .fade-in {
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .fade-in-left {
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-right {
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-up {
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scale-in {
+            transform: scale(0.92);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
+
+        /* Custom Cursor Style */
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.2s, height 0.2s, background-color 0.2s;
+            mix-blend-mode: difference;
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .custom-cursor { display: none; }
+        }
+
+        .portfolio-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(20, 143, 238, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(20, 143, 238, 0.15);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .animate-marquee-container {
+            display: flex;
+            width: max-content;
+            gap: var(--logo-gap);
+            animation: marquee var(--marquee-speed) linear infinite;
+        }
+
+        .animate-marquee-container-reverse {
+            display: flex;
+            width: max-content;
+            gap: var(--logo-gap);
+            animation: marquee-reverse var(--marquee-speed-reverse) linear infinite;
+        }
+
+        .animate-marquee-container:hover,
+        .animate-marquee-container-reverse:hover {
+            animation-play-state: paused;
+        }
+
+        .client-logo {
+            height: var(--logo-height-mobile);
+            width: auto;
+            object-fit: contain;
+            opacity: 0.5;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+
+        @media (min-width: 768px) {
+            .client-logo {
+                height: var(--logo-height-desktop);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-marquee-container,
+            .animate-marquee-container-reverse,
+            .profile-orbit,
+            .profile-glow-blob {
+                animation: none !important;
+            }
+            .fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .scale-in {
+                transition: none !important;
+            }
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -3rem;
+            z-index: 100;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        section[id] {
+            scroll-margin-top: 5.5rem;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 40px rgba(20, 143, 238, 0.2);
+        }
+
+        .name-glow {
+            display: inline-block;
+            cursor: default;
+            transition: text-shadow 0.5s ease,
+                        transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.12s,
+                        filter 0.5s ease;
+        }
+
+        .name-glow:hover {
+            transform: scale(1.035);
+            text-shadow: 0 0 25px rgba(20, 143, 238, 0.85),
+                         0 0 55px rgba(193, 27, 132, 0.55),
+                         0 0 90px rgba(20, 143, 238, 0.35);
+            filter: brightness(1.08);
+        }
+
+        .brand-icon {
+            width: 12rem;
+            height: auto;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.88);
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.8);
+        }
+
+        .site-footer {
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 0.03em;
+            color: rgba(161, 161, 170, 0.65);
+            border-top: 1px solid rgba(39, 39, 42, 0.8);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .site-footer span {
+            color: rgba(20, 143, 238, 0.85);
+            font-weight: 600;
+        }
+
+        .profile-frame {
+            position: relative;
+            border-radius: 2.5rem;
+            padding: 6px;
+            background: linear-gradient(145deg, var(--primary), var(--accent));
+            box-shadow: 0 30px 60px -20px rgba(20, 143, 238, 0.35);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+
+        .profile-frame:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 40px 80px -20px rgba(193, 27, 132, 0.4);
+        }
+
+        .profile-frame-inner {
+            position: relative;
+            border-radius: 2.25rem;
+            overflow: hidden;
+            background-color: #050505;
+        }
+
+        .profile-frame-inner img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .profile-frame:hover .profile-frame-inner img {
+            transform: scale(1.04);
+        }
+
+        .profile-glow-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            animation: profileDrift 10s ease-in-out infinite;
+        }
+
+        .profile-glow-blob.blob-a {
+            width: 220px;
+            height: 220px;
+            background: rgba(20, 143, 238, 0.35);
+            top: -40px;
+            left: -40px;
+        }
+
+        .profile-glow-blob.blob-b {
+            width: 180px;
+            height: 180px;
+            background: rgba(193, 27, 132, 0.3);
+            bottom: -30px;
+            right: -30px;
+            animation-delay: -5s;
+        }
+
+        @keyframes profileDrift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(12px, -12px) scale(1.08); }
+        }
+
+        .profile-badge {
+            position: absolute;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid rgba(20, 143, 238, 0.4);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.55rem 0.9rem;
+            border-radius: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="text-zinc-100 overflow-x-hidden antialiased selection:bg-[#148fee] selection:text-white">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="site-bg-layer" aria-hidden="true">
+        <canvas id="checkerboard-canvas" role="img" aria-label="Animated blue perspective grid background"></canvas>
+    </div>
+
+    <div class="custom-cursor" id="cursor"></div>
+
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="Asset/M_Logo.webp" alt="Akchat Bhargava — 2D/3D animator & motion graphic designer logo" class="brand-icon" width="224" height="40" decoding="async">
+            </a>
+
+            <nav id="primary-nav" class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-zinc-400" aria-label="Primary">
+                <a href="#about" class="hover:text-white transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#148fee] hover:after:w-full after:transition-all">About</a>
+                <a href="#portfolio" class="hover:text-white transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#148fee] hover:after:w-full after:transition-all">Portfolio</a>
+                <a href="#clients" class="hover:text-white transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#148fee] hover:after:w-full after:transition-all">Clients</a>
+                <a href="#career" class="hover:text-white transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#148fee] hover:after:w-full after:transition-all">Career</a>
+                <a href="#contact" class="hover:text-white transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#148fee] hover:after:w-full after:transition-all">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919935174490" target="_blank"
+                   class="bg-[#148fee] hover:bg-[#c11b84] shadow-lg shadow-[#148fee]/10 hover:shadow-[#c11b84]/10 transition-all duration-300 text-white font-bold px-5 py-2.5 rounded-xl flex items-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fab fa-whatsapp text-sm"></i> <span class="hidden sm:inline">WhatsApp Me</span><span class="sm:hidden">Chat</span>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-zinc-200 border border-zinc-800 rounded-lg w-10 h-10 flex items-center justify-center" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-nav" aria-label="Mobile" class="hidden md:hidden flex-col bg-black/95 border-t border-white/5 px-6 py-4 gap-1 text-sm font-semibold uppercase tracking-widest text-zinc-300">
+            <a href="#about" class="py-3 border-b border-white/5">About</a>
+            <a href="#portfolio" class="py-3 border-b border-white/5">Portfolio</a>
+            <a href="#clients" class="py-3 border-b border-white/5">Clients</a>
+            <a href="#career" class="py-3 border-b border-white/5">Career</a>
+            <a href="#contact" class="py-3">Contact</a>
+        </nav>
+    </header>
+
+    <section id="main-content" class="min-h-screen flex items-center pt-28 pb-16 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10">
+            
+            <div class="space-y-6 md:space-y-8 lg:col-span-7 order-2 lg:order-1 fade-in" id="hero-content">
+                <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-zinc-800 backdrop-blur-md text-zinc-300 text-xs font-semibold px-4 py-2 rounded-full tracking-wider">
+                    <span class="w-2 h-2 bg-[#148fee] rounded-full animate-pulse"></span>
+                    AVAILABLE FOR GLOBAL PROJECTS
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter text-glow name-glow">
+                    AKCHAT<br><span class="bg-gradient-to-r from-[#148fee] to-purple-400 bg-clip-text text-transparent">BHARGAVA</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-zinc-400 font-light max-w-xl leading-relaxed">
+                    2D/3D Animator <span class="text-[#148fee]">•</span> Motion Designer <span class="text-[#148fee]">•</span> Visual Storyteller
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#portfolio" class="bg-white text-black text-sm font-semibold px-8 py-4 rounded-xl hover:bg-[#148fee] hover:text-white shadow-lg transition-all duration-300 text-center flex-1 sm:flex-none">
+                        VIEW WORK
+                    </a>
+                    <a href="#contact" class="border border-zinc-700 hover:border-[#148fee] bg-zinc-900/30 backdrop-blur-sm text-sm font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-center flex-1 sm:flex-none">
+                        LET'S TALK
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center w-full scale-in" id="hero-image">
+                <div class="profile-frame w-full max-w-sm md:max-w-md">
+                    <span class="profile-glow-blob blob-a" aria-hidden="true"></span>
+                    <span class="profile-glow-blob blob-b" aria-hidden="true"></span>
+                    <div class="profile-frame-inner aspect-[4/5]">
+                        <img
+                            src="Asset/profile.webp"
+                            alt="Akchat Bhargava — professional headshot of a 2D/3D animator, motion graphic designer and ad designer, Founder & CEO of AB DZINR"
+                            width="720"
+                            height="900"
+                            loading="eager"
+                            decoding="async"
+                            fetchpriority="high"
+                            class="relative z-10">
+                        <div class="profile-badge">
+                            <span class="w-2 h-2 bg-[#148fee] rounded-full animate-pulse"></span>
+                            Open to Work
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 md:py-32 bg-zinc-950/90 backdrop-blur-sm border-t border-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <div class="lg:col-span-5 fade-in" id="about-left">
+                    <p class="text-xs uppercase tracking-widest text-[#148fee] font-bold mb-3">Introduction</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">ABOUT ME</h2>
+                    <div class="text-base md:text-lg text-zinc-400 font-light leading-relaxed space-y-4">
+                        <p id="about-text">
+                            <span class="font-bold text-zinc-100">I’m Akchat Bhargava, Founder & CEO of AB DZINR, specializing in Graphic Design, Brand Identity, Motion Graphics, Video Production, and 3D Visualization.</span> I create strategic, visually compelling solutions that elevate brands, communicate purpose, and deliver measurable impact through thoughtful design and storytelling.
+                            With expertise spanning branding, advertising, digital marketing, packaging, motion graphics, premium event branding, and photorealistic 3D visualization, I transform ideas into engaging visual experiences. 
+                            From concept to execution, I combine creativity, technical precision, and innovation to craft high-quality designs that strengthen brand presence and leave a lasting impression. 
+                        </p>
+                        <p class="text-sm border-l-2 border-[#148fee] pl-4 text-zinc-500 italic">
+                            Where creativity meets strategy to craft designs that elevate brands and tell compelling stories.
+                            From branding to immersive 3D visualization, every detail is designed with purpose.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 fade-in-left" id="about-right">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-zinc-900/40 border border-zinc-800/60 p-6 md:p-8 rounded-2xl backdrop-blur-sm">
+                            <h3 class="uppercase text-[#148fee] text-xs mb-6 font-bold tracking-widest flex items-center gap-2">
+                                <span class="w-1 h-3 bg-[#148fee] rounded-full"></span> Capabilities
+                            </h3>
+                            <ul id="capabilities-list" class="space-y-3.5 text-zinc-300 text-sm font-medium">
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> 3D Modelling &amp; Lighting</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Motion Graphics</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Product Design</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Brand Identity</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Video Editing</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Logo Design</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Invitation cards</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Promotion design</li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Advertisements </li>
+                                <li class="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> UGC Ads </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-zinc-900/40 border border-zinc-800/60 p-6 md:p-8 rounded-2xl backdrop-blur-sm">
+                            <h3 class="uppercase text-[#148fee] text-xs mb-6 font-bold tracking-widest flex items-center gap-2">
+                                <span class="w-1 h-3 bg-[#148fee] rounded-full"></span> Mastered Tools
+                            </h3>
+                            <ul id="tools-list" class="grid grid-cols-1 gap-3 text-zinc-400 text-sm font-medium">
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Autodesk Maya</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> 3ds Max</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe Premiere Pro</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe After Effects</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe Photoshop</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe Illustrator</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe InDesign</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Adobe Audition</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> CorelDRAW</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Canva</li>
+                                <li class="hover:text-white transition-colors"><span class="text-[#148fee]">➲</span> Advanced AI Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 md:py-32 bg-black/90 backdrop-blur-sm text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="fade-in mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-[#148fee] font-bold mb-3">Creative Showreel</p>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight">OUR PROJECTS</h2>
+                </div>
+                <span class="text-zinc-500 text-sm font-medium hidden md:inline-block">Curated Production Folders</span>
+            </div>
+            
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/Mobility.webp" alt="3D animation showreel by Akchat Bhargava — character animation, hard-surface modeling, VFX simulation and cinematic 3D animator portfolio" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Mobility</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Mobility Sector</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Translating the complex world of smart transit into clean, compelling visuals. From social media storytelling to core design elements, I make the next generation of mobility accessible and engaging</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/1HZJsXy27TSlhE5_SsDmuAzh3xsTYC62M?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/learning.webp" alt="Logo design and brand identity showreel — graphic designer and brand identity designer portfolio by Akchat Bhargava" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Learning</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Learning Landscape</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Bringing educational ideas to life through high-impact design. From dynamic social media storytelling to seamless visual elements, I create the aesthetic backbone for the future of learning.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/19FMY3EnGhg8iUFtTXrO6c34EvDr79bjT?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/hospital.webp" alt="Advertisement design showreel — ad designer and motion graphic designer portfolio featuring social media ad creatives and commercial video ads" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Medical</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Care Economy</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Bringing visual identity to the spaces that look after us all. From engaging social media storytelling to core brand elements, I build the creative foundation for a thriving care economy</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/1U_tQ0DBKHHP9WkBS3DDvFY1RdkCqN-i-?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/it.webp" alt="Product and packaging design showreel — 3D product visualization artist and packaging designer portfolio with PBR texturing and studio renders" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Tech Space</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Digital Frontier</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Translating bold concepts into iconic brand identities. I build the complete visual frameworks, social media strategies, and core design elements needed to conquer the digital frontier.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/1A0kDV4i6gfYxpTol2ew3QQcwQ9lVlNXy?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/sports.webp" alt="Luxury digital invitation and stationery design showreel by graphic designer Akchat Bhargava" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Sports</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Arena Space</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Designing the visuals that amplify the fan experience. From dynamic social media storytelling to striking brand graphics, I build the creative momentum that defines the arena space.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/1IlD-YCXNey3-OW57p7N7WLaMZwzZ5mzo?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+
+         <div class="portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-zinc-950">
+                            <img src="Asset/packaging.webp" alt="Luxury digital invitation and stationery design showreel by graphic designer Akchat Bhargava" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">Packaging</div>
+                        </div>
+                        <div class="p-6 md:p-8 pb-4">
+                            <h3 class="text-xl font-bold mb-2.5 text-zinc-100 group-hover:text-[#148fee] transition-colors">The Unboxing & Identity Landscape</h3>
+                            <p class="text-zinc-400 text-sm font-light leading-relaxed">Turning brand strategy into a physical sensory experience. I design real-world packaging and identity systems that make every unboxing moment unforgettable, memorable, and visually striking.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0">
+                        <a href="https://drive.google.com/drive/folders/1lrbC7JZiK9vD-yZim9EI7EZvLsb11Dmh?usp=drive_link" target="_blank" class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                            VIEW WORK <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-20 bg-zinc-950/90 backdrop-blur-sm overflow-hidden border-y border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+            <p class="text-xs uppercase tracking-widest text-[#148fee] font-bold mb-2">Collaborations</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">TRUSTED BY INDUSTRY LEADERS</h2>
+            <p class="sr-only">
+                Brands and organizations who trusted animator and designer Akchat Bhargava (AB DZINRS) include
+                Paras Health, Allenhouse School, Alveena Group, Gaurav Masale, Bikanerwala, DigitifeX, Eka Mobility,
+                Force Motors, Tata Motors, Signa Picklespin, Fun Fair, Global Airgrid, Label Nalini, Picklespin,
+                Senora, The Doon School, TSH Sports, Vespa-Aprilia, Unique Zone and XE.
+            </p>
+        </div>
+
+        <div class="relative w-full overflow-hidden flex flex-col gap-10 mask-gradient" aria-hidden="true">
+            <div id="logo-marquee" class="animate-marquee-container items-center">
+                <img src="Asset/paras.webp" alt="Paras Health — client of animator and designer Akchat Bhargava" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/AHW.webp" alt="Allenhouse School — branding client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/ARVC.webp" alt="Alveena Group — ad design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/bbg.webp" alt="Gaurav Masale — packaging design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/BV.webp" alt="Bikanerwala — brand identity client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/DFX.webp" alt="DigitifeX — motion graphics client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/eka.webp" alt="Eka Mobility — 3D product visualization client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/Force.webp" alt="Force Motors — video production client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/tata.webp" alt="Tata Motors — creative design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/SPS.webp" alt="Signa Picklespin — brand design client" loading="lazy" decoding="async" class="client-logo">
+            </div>
+
+            <div id="logo-marquee-reverse" class="animate-marquee-container-reverse items-center">
+                <img src="Asset/FFR.webp" alt="Fun Fair — advertisement design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/GA.webp" alt="Global Airgrid — brand identity client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/nali.webp" alt="Label Nalini — packaging design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/pick.webp" alt="Picklespin — motion graphics client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/SEN.webp" alt="Senora — brand design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/tds.webp" alt="The Doon School — branding client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/TSH.webp" alt="TSH Sports — brand identity client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/Vespa.webp" alt="Vespa-Aprilia — ad design client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/UZ.webp" alt="Unique Zone — motion graphics client" loading="lazy" decoding="async" class="client-logo">
+                <img src="Asset/XE.webp" alt="XE — brand design client" loading="lazy" decoding="async" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="career" class="py-20 md:py-32 bg-black/90 backdrop-blur-sm text-white relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="fade-in mb-16">
+                <p class="text-xs uppercase tracking-widest text-[#148fee] font-bold mb-3">Professional Track</p>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">CAREER MILESTONES</h2>
+            </div>
+            
+            <div class="space-y-8 md:space-y-10" id="career-list">
+                <div class="bg-zinc-900/40 border border-zinc-800/80 p-6 md:p-10 rounded-2xl backdrop-blur-sm fade-in-up relative group hover:border-zinc-700/80 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-zinc-100">AB DZINR</h3>
+                            <p class="text-[#148fee] font-medium tracking-wide mt-1 text-sm md:text-base">Founder & C.E.O</p>
+                        </div>
+                        <span class="text-zinc-400 text-xs font-bold bg-zinc-800 border border-zinc-700/50 px-4 py-2 rounded-full self-start md:self-center">
+                            2025 – Present
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-zinc-400 text-sm md:text-base font-light">
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">➲</span>
+                            <span>Develop comprehensive brand identity systems, including logo design, visual language, packaging, stationery, and marketing collateral that strengthen brand recognition.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">➲</span>
+                            <span>Produce cinematic motion graphics, corporate videos, product explainers, promotional films, and post-production content optimized for digital engagement.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">➲</span>
+                            <span>Deliver photorealistic 3D product visualization, architectural rendering, hard-surface modeling, and animation for marketing, presentations, and e-commerce.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">➲</span>
+                            <span>Develop premium packaging, product labels, merchandise, and retail branding solutions that enhance customer perception and commercial appeal.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-zinc-900/40 border border-zinc-800/80 p-6 md:p-10 rounded-2xl backdrop-blur-sm fade-in-up relative group hover:border-zinc-700/80 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-zinc-100">Freelance Design Studio Projects</h3>
+                            <p class="text-[#148fee] font-medium tracking-wide mt-1 text-sm md:text-base">Professional Designer, Editor & Lead Product Designer</p>
+                        </div>
+                        <span class="text-zinc-400 text-xs font-bold bg-zinc-800 border border-zinc-700/50 px-4 py-2 rounded-full self-start md:self-center">
+                            2024 – Present
+                        </span>
+                    </div>
+                    <ul class="space-y-3.5 text-zinc-400 text-sm md:text-base font-light">
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">Alveena Group / Ads Agency Hub:</strong> Managed creative design initiatives for digital marketing campaigns, delivering impactful social media assets, advertising creatives, and cohesive brand experiences.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">DigitifeX:</strong> Spearheaded scalable visual design frameworks and oversaw post-production workflows for high-conversion client marketing.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">Rpian Tech Lab:</strong> Edited and enhanced marketing videos, advertisements, and branded content, ensuring seamless storytelling, visual consistency, and platform-specific optimization.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">Gaurav Spices:</strong> Designed impactful packaging solutions for a retail spices brand, combining brand identity, regulatory compliance, and shelf-ready aesthetics to enhance consumer appeal.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">Karan Printers:</strong> Designed premium packaging systems and visual assets, ensuring cohesive brand communication across product lines, retail displays, and promotional materials.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span><strong class="text-zinc-200">Iclap & AKW Computers:</strong> Designed and developed the complete brand identity, including logo, color palette, typography, and visual guidelines, ensuring a cohesive and recognizable brand presence.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-zinc-900/40 border border-zinc-800/80 p-6 md:p-10 rounded-2xl backdrop-blur-sm fade-in-up relative group hover:border-zinc-700/80 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-zinc-100">ED7 Media</h3>
+                            <p class="text-[#148fee] font-medium tracking-wide mt-1 text-sm md:text-base">Designer & Editor</p>
+                        </div>
+                        <span class="text-zinc-400 text-xs font-bold bg-zinc-800 border border-zinc-700/50 px-4 py-2 rounded-full self-start md:self-center">
+                            2024 • 6 Months
+                        </span>
+                    </div>
+                    <ul class="space-y-3 text-zinc-400 text-sm md:text-base font-light">
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span>Collaborated with marketing strategists, content creators, and account managers to deliver creative solutions aligned with campaign objectives and business goals.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#148fee] mt-1 font-bold">→</span>
+                            <span>Designed and executed high-impact digital marketing creatives, including social media campaigns, display advertisements, email graphics, and promotional assets across multiple platforms.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-zinc-950/90 backdrop-blur-sm text-white border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="fade-in">
+                <h3 class="uppercase text-[#148fee] mb-8 flex items-center gap-3 font-bold text-sm tracking-widest">
+                    <i class="fas fa-graduation-cap"></i> Academic Background
+                </h3>
+                
+                <div id="education-list" class="space-y-6">
+                    <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="flex justify-between items-start gap-4 mb-2">
+                            <h4 class="text-lg font-bold text-zinc-100">2D & 3D Designer</h4>
+                            <span class="text-zinc-400 text-xs font-semibold bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-full shrink-0">2024 – Present</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm mb-2 font-light">Polyframe Academy Of Arts & Cinematics - Kanpur </p>
+                        <p class="text-[#148fee] text-sm font-semibold">Score: A+</p>
+                    </div>
+
+                    <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="flex justify-between items-start gap-4 mb-2">
+                            <h4 class="text-lg font-bold text-zinc-100">BACHELOR OF COMMERCE (B.COM)</h4>
+                            <span class="text-zinc-400 text-xs font-semibold bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-full shrink-0">2023</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm mb-2 font-light">D.A.V. COLLEGE,CIVIL LINES, KANPUR (CSJMU)</p>
+                        <p class="text-[#148fee] text-sm font-semibold">Score: 75.2%</p>
+                    </div>
+
+                    <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="flex justify-between items-start gap-4 mb-2">
+                            <h4 class="text-lg font-bold text-zinc-100">Class 12 — Commerce</h4>
+                            <span class="text-zinc-400 text-xs font-semibold bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-full shrink-0">2020</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm mb-2 font-light">United Public School, Kanpur (ICS Board)</p>
+                        <p class="text-[#148fee] text-sm font-semibold">Score: 84%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 md:py-36 bg-black/90 backdrop-blur-sm border-t border-zinc-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#148fee]/5 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center px-6 relative z-10 fade-in scale-in">
+            <p class="text-xs uppercase tracking-widest text-[#148fee] font-bold mb-4">Let's build something exceptional</p>
+            <div class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-glow">LET'S CONNECT.</div>
+            <p class="text-lg md:text-xl text-zinc-400 font-light mb-10 max-w-xl mx-auto">Available for freelance, contract, and full-time opportunities in branding, graphic design, motion graphics, and 3D visualization.</p>
+            
+            <a href="mailto:abdzinr@gmail.com" 
+               class="inline-block bg-[#148fee] hover:bg-[#c11b84] text-white font-bold text-base md:text-xl px-8 py-5 md:px-10 md:py-5 rounded-xl shadow-xl shadow-[#148fee]/10 hover:shadow-[#c11b84]/10 transition-all duration-300 break-all max-w-full tracking-wide">
+               <i class="far fa-envelope mr-2"></i> abdzinr@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        This website has been created by <span>Akchat Bhargava</span> in guidance of Polyframe Academy
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.05,
+            rootMargin: "0px 0px -40px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        function bindAnimations() {
+            document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .scale-in').forEach(el => {
+                revealObserver.observe(el);
+            });
+        }
+
+        function addPortfolioItem(title, category, year, imagePath, description) {
+            const grid = document.getElementById('portfolio-grid');
+            if (!grid) return;
+            const card = document.createElement('div');
+            card.className = 'portfolio-card fade-in group bg-zinc-900/30 rounded-2xl overflow-hidden border border-zinc-800/80 backdrop-blur-sm flex flex-col justify-between h-full';
+            card.innerHTML = `
+                <div>
+                    <div class="relative h-52 overflow-hidden bg-zinc-950">
+                        <img src="${imagePath}" alt="${title} — ${category} showreel by Akchat Bhargava, 2D/3D animator and motion graphic designer" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[10px] px-3 py-1 rounded-full uppercase tracking-wider font-bold text-[#148fee] border border-white/5">${category} • ${year}</div>
+                    </div>
+                    <div class="p-6 md:p-8 pb-4">
+                        <h3 class="text-xl font-bold mb-2.5 text-zinc-100">${title}</h3>
+                        <p class="text-zinc-400 text-sm font-light leading-relaxed">${description}</p>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 pt-0">
+                    <button class="w-full inline-flex items-center justify-center gap-2 border border-zinc-800 group-hover:border-[#148fee] group-hover:bg-[#148fee] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all duration-300">
+                        View Details <span>→</span>
+                    </button>
+                </div>
+            `;
+            grid.appendChild(card);
+            revealObserver.observe(card);
+        }
+
+        const MARQUEE_CONFIG = {
+            logoHeightMobile: null,   
+            logoHeightDesktop: null,  
+            logoGap: null,            
+            speed: null,              
+            speedReverse: null        
+        };
+
+        function applyMarqueeConfig(config) {
+            const root = document.documentElement.style;
+            if (config.logoHeightMobile) root.setProperty('--logo-height-mobile', config.logoHeightMobile);
+            if (config.logoHeightDesktop) root.setProperty('--logo-height-desktop', config.logoHeightDesktop);
+            if (config.logoGap) root.setProperty('--logo-gap', config.logoGap);
+            if (config.speed) root.setProperty('--marquee-speed', config.speed);
+            if (config.speedReverse) root.setProperty('--marquee-speed-reverse', config.speedReverse);
+        }
+
+        function initPerspectiveGrid() {
+            const canvas = document.getElementById('checkerboard-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            const CONFIG = {
+                speed: 0.01,        
+                gridSize: 45,       
+                lineColor: '#148fee', 
+                glowColor: '#0c528c'  
+            };
+
+            let offset = 0;
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            function render() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                offset = (offset + CONFIG.speed) % 1;
+
+                const w = canvas.width;
+                const h = canvas.height;
+                const horizonY = h * 0.15; 
+                const vanishX = w / 2;
+
+                ctx.lineWidth = 1.5;
+
+                const columns = Math.ceil(w / CONFIG.gridSize) + 16;
+                for (let i = -columns; i <= columns; i++) {
+                    const xHorizon = vanishX + (i * CONFIG.gridSize * 0.05);
+                    const xBottom = vanishX + (i * CONFIG.gridSize * 3.5);
+
+                    const gridGradient = ctx.createLinearGradient(0, horizonY, 0, h);
+                    gridGradient.addColorStop(0, 'rgba(20, 143, 238, 0.02)');
+                    gridGradient.addColorStop(0.4, 'rgba(20, 143, 238, 0.18)');
+                    gridGradient.addColorStop(1, CONFIG.lineColor);
+
+                    ctx.strokeStyle = gridGradient;
+                    ctx.beginPath();
+                    ctx.moveTo(xHorizon, horizonY);
+                    ctx.lineTo(xBottom, h);
+                    ctx.stroke();
+                }
+
+                const maxRows = 28;
+                for (let i = 0; i < maxRows; i++) {
+                    const ratio = (i + offset) / maxRows;
+                    const y = horizonY + Math.pow(ratio, 2.2) * (h - horizonY);
+
+                    if (y > horizonY) {
+                        const alpha = Math.min((y - horizonY) / (h * 0.2), 1) * (0.15 + (ratio * 0.85));
+                        ctx.strokeStyle = `rgba(20, 143, 238, ${alpha})`;
+                        ctx.beginPath();
+                        ctx.moveTo(0, y);
+                        ctx.lineTo(w, y);
+                        ctx.stroke();
+                    }
+                }
+
+                const ambientGlow = ctx.createLinearGradient(0, horizonY, 0, h);
+                ambientGlow.addColorStop(0, 'rgba(0, 0, 0, 1)');
+                ambientGlow.addColorStop(0.12, 'rgba(0, 0, 0, 0.7)');
+                ambientGlow.addColorStop(0.65, 'rgba(12, 82, 140, 0.0)');
+                ambientGlow.addColorStop(1, 'rgba(20, 143, 238, 0.05)');
+                ctx.fillStyle = ambientGlow;
+                ctx.fillRect(0, 0, w, h);
+
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            bindAnimations();
+            initPerspectiveGrid();
+            applyMarqueeConfig(MARQUEE_CONFIG);
+
+            const header = document.getElementById("site-header");
+            if (header) {
+                const toggleHeaderDepth = () => {
+                    header.classList.toggle("scrolled", window.scrollY > 24);
+                };
+                toggleHeaderDepth();
+                window.addEventListener("scroll", toggleHeaderDepth, { passive: true });
+            }
+
+            const menuBtn = document.getElementById("mobile-menu-btn");
+            const mobileNav = document.getElementById("mobile-nav");
+            if (menuBtn && mobileNav) {
+                menuBtn.addEventListener("click", () => {
+                    const isOpen = mobileNav.classList.toggle("flex");
+                    mobileNav.classList.toggle("hidden");
+                    menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                    menuBtn.innerHTML = isOpen ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+                });
+                mobileNav.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        mobileNav.classList.add("hidden");
+                        mobileNav.classList.remove("flex");
+                        menuBtn.setAttribute("aria-expanded", "false");
+                        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+
+            const marquee = document.getElementById("logo-marquee");
+            if (marquee) {
+                const clone = marquee.innerHTML;
+                marquee.innerHTML += clone; 
+            }
+
+            const marqueeReverse = document.getElementById("logo-marquee-reverse");
+            if (marqueeReverse) {
+                const cloneReverse = marqueeReverse.innerHTML;
+                marqueeReverse.innerHTML += cloneReverse;
+            }
+
+            const cursor = document.getElementById('cursor');
+            
+            if (cursor && window.innerWidth > 768) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+                    cursor.style.opacity = '1';
+                });
+
+                const interactiveElements = document.querySelectorAll('a, button, .portfolio-card, [role="button"]');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        cursor.style.width = '45px';
+                        cursor.style.height = '45px';
+                        cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        cursor.style.width = '20px';
+                        cursor.style.height = '20px';
+                        cursor.style.backgroundColor = 'transparent';
+                    });
+                });
+            }
+        });
+
+        window.onload = function() {
+            bindAnimations();
+        };
+    </script>
+</body>
+</html>
